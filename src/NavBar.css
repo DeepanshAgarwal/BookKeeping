@@ -1,0 +1,139 @@
+* {
+    border: border-box;
+}
+
+nav {
+    z-index: 10;
+    height: 60px;
+    width: calc(95vw - 12px);
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 2.5vw;
+    background-color: #434c5e;
+    position: sticky;
+    top: 0;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #d8dee9;
+    padding-right: 3vw;
+    font-size: 1.2rem;
+    transition: transform 0.1s;
+}
+
+.menu-icon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 0px 2vw 0px 0px;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-inner {
+    /* min-width: 35%; */
+    width: 100%;
+    max-width: 500px;
+    height: 30px;
+    padding: 5px 10px 5px 20px;
+    border-radius: 25px;
+    border: 2px solid #d8dee9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(43, 43, 43); */
+    /* background-color: #242424; */
+    transition: transform 0.3s;
+}
+
+.search-inner:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transform-origin: center;
+}
+
+.search-inner input::placeholder {
+    color: rgb(174, 173, 173);
+    /* font-weight: 700; */
+}
+
+.search-inner input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #d8dee9;
+    font-weight: 700;
+}
+
+.search-inner input:focus {
+    border: none;
+    outline: none;
+}
+
+.search-button {
+    background-color: transparent;
+    height: 40px;
+    padding: none;
+    margin: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #d8dee9;
+    border-radius: 0px 25px 25px 0px;
+    position: relative;
+    left: 10px;
+    color: #d8dee9;
+}
+
+.search-button:hover {
+    border-color: transparent transparent transparent #d8dee9;
+}
+
+.search-button i {
+    transition: transform 0.2s 0.1s;
+}
+
+.search-button i:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.button {
+    background-color: transparent;
+    margin: 0px 1vw;
+    font-weight: 700;
+    font-size: 1em;
+    color: white;
+    transition: transform 0.1s;
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    border-color: #d8dee9;
+}
+
+.profile-icon {
+    height: 30px;
+    width: 30px;
+    padding: 0px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #d8dee9;
+}
