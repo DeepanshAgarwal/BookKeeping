@@ -87,10 +87,10 @@ export default function ExpandedCard({
                             </p>
                         </div>
                         <div className="allInfo-buttons">
-                            <div className="favourites">
+                            <div className="favourites button">
                                 <button>Add to Favourites</button>
                             </div>
-                            <div className="close">
+                            <div className="close button">
                                 <button onClick={handleClose}>Close</button>
                             </div>
                         </div>

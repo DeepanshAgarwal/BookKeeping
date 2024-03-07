@@ -71,3 +71,20 @@
     justify-content: center;
     align-items: center;
 }
+
+.close {
+    margin-left: 50px;
+}
+
+.favourites {
+    margin-left: 0px;
+}
+
+.favourites button {
+    margin-left: 0px;
+}
+
+.favourites button,
+.close button {
+    background-color: #d8dee9;
+}

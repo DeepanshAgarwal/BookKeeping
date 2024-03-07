@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
 
+import Favourites from "./Favourites";
+
 export default function NavBar() {
+    const [showFavourites, setShowFavourites] = useState(false);
+
+    function openFavourites() {
+        setShowFavourites(true);
+    }
+
+    function closeFavourites() {
+        setShowFavourites(false);
+    }
+
     return (
         <nav>
             <div className="menu-icon">
@@ -18,11 +30,14 @@ export default function NavBar() {
                     </button>
                 </div>
             </div>
-            <button className="bookmarks button">Bookmarks</button>
+            <button className="favourites button" onClick={openFavourites}>
+                Favourites
+            </button>
             <button className="profile button">Profile</button>
             <button className="profile-icon button">
                 <i class="fa-solid fa-user"></i>
             </button>
+            {showFavourites && <Favourites onClose={closeFavourites} />}
         </nav>
     );
 }
