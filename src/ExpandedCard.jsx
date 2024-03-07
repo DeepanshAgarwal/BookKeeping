@@ -4,7 +4,9 @@ import Dialog from "@mui/material/Dialog";
 import Slide from "@mui/material/Slide";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
+
 import "./ExpandedCard.css";
+import { addToFavourites, removeFromFavourites } from "./favouritesData";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
     return <Slide direction="up" ref={ref} {...props} />;
@@ -22,6 +24,7 @@ export default function ExpandedCard({
     onClose,
 }) {
     const [open, setOpen] = React.useState(true);
+    const [isFavourite, setIsFavourite] = React.useState(false);
 
     // const handleClickOpen = () => {
     //     setOpen(true);
@@ -31,6 +34,26 @@ export default function ExpandedCard({
         setOpen(false);
         onClose();
     };
+
+    function updateFavourites() {
+        let currentBook = {
+            title: title,
+            author: author,
+            pageCount: pages,
+            coverPageUrl: url,
+            categories: categories,
+            summary: summary,
+            isbn: isbn,
+        };
+        if (isFavourite == true) {
+            removeFromFavourites(currentBook);
+            setIsFavourite(false);
+            return;
+        } else {
+            addToFavourites(currentBook);
+            setIsFavourite(true);
+        }
+    }
 
     return (
         <React.Fragment>
@@ -87,9 +110,19 @@ export default function ExpandedCard({
                             </p>
                         </div>
                         <div className="allInfo-buttons">
-                            <div className="favourites button">
-                                <button>Add to Favourites</button>
-                            </div>
+                            {isFavourite == false ? (
+                                <div className="favourites button">
+                                    <button onClick={updateFavourites}>
+                                        Add to Favourites
+                                    </button>
+                                </div>
+                            ) : (
+                                <div className="favourites button">
+                                    <button onClick={updateFavourites}>
+                                        Remove from Favourites
+                                    </button>
+                                </div>
+                            )}
                             <div className="close button">
                                 <button onClick={handleClose}>Close</button>
                             </div>

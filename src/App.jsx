@@ -57,7 +57,13 @@ function App() {
             <div className="main-content">
                 {allData.length === 0 && <CustomPlaceholder />}
                 {allData.map((data, index) => {
-                    return <CardsDisplay index={index} categoryData={data} />;
+                    return (
+                        <CardsDisplay
+                            key={index}
+                            index={index}
+                            categoryData={data}
+                        />
+                    );
                 })}
             </div>
         </div>

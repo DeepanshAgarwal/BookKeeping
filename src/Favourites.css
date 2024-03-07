@@ -1,0 +1,24 @@
+.Favourites {
+    /* padding: 2vh 2vw; */
+    min-height: calc(100vh - 4vh);
+    /* height: auto; */
+    background-color: #2e3440;
+    color: #eceff4;
+}
+
+h1 {
+    margin: 0px;
+    padding: 2vh 2vw;
+}
+
+.favouriteBooks {
+    /* height: 100%; */
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    gap: 2vw;
+    align-items: center;
+    margin-top: 2vh;
+    padding: 2vh 2vw;
+    background-color: #2e3440;
+}

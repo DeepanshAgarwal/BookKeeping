@@ -9,7 +9,7 @@ export default function Card({
     categories,
     url,
     summary,
-    key,
+    id,
     isbn,
 }) {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -23,7 +23,7 @@ export default function Card({
     }
 
     return (
-        <div className="card" id={key}>
+        <div className="card" id={id}>
             <div className="visible" onClick={handleCardClick}>
                 <div className="image">
                     <img src={url} alt={title} />
@@ -44,7 +44,7 @@ export default function Card({
                     url={url}
                     categories={categories}
                     summary={summary}
-                    key={key}
+                    key={id}
                     isbn={isbn}
                     onClose={handleExpandedCardClose}
                 />

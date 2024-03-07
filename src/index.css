@@ -79,7 +79,7 @@ body {
 }
 ::-webkit-scrollbar-track {
     /* background: linear-gradient(#2e3440); */
-    background-color: transparent;
+    background-color: #2e3440;
 }
 ::-webkit-scrollbar-thumb {
     background: #d8dee9;

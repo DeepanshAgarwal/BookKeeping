@@ -12,3 +12,5 @@ function removeFromFavourites(book) {
     );
     console.log("Book removed from favourites: ", book);
 }
+
+export { favouriteBooks, addToFavourites, removeFromFavourites };

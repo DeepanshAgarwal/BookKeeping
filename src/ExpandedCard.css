@@ -1,9 +1,10 @@
 .allInfo {
-    height: 100vh;
-    background-color: #3b4252;
+    height: auto;
+    background-color: #2e3440;
     display: flex;
     color: #eceff4;
     font-family: "Roboto", sans-serif;
+    overflow-y: hidden;
 }
 
 .allInfo b {
@@ -12,6 +13,7 @@
 
 .allInfo-content {
     padding: 40px;
+    overflow-y: scroll;
 }
 
 .allInfo-title {
