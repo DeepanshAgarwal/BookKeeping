@@ -6,7 +6,7 @@ Made Using React.
 NOTE: 
 Website takes 20-25 seconds to load. Please be patient.
 
-###Features:
+Features:
 Real time data fetching,
 Custom Loading Screen,
 Detailed Book View,
