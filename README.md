@@ -2,13 +2,14 @@
 
 Frontend Website for Books Information.
 Made Using React.
-NOTE: Website takes 20-25 seconds to load. Please be patient.
+##NOTE: 
+Website takes 20-25 seconds to load. Please be patient.
 
-Features:
+###Features:
 Real time data fetching
 Custom Loading Screen
 Detailed Book Views
 
-Upcoming Features:
+###Upcoming Features:
 Search any book
 Add book to favourites
