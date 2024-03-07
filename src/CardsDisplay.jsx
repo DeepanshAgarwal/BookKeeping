@@ -60,6 +60,7 @@ export default function CardsDisplay({ index, categoryData }) {
                 summary={refinedData.summary}
                 url={refinedData.coverPageUrl}
                 isbn={refinedData.isbn}
+                favourite={refinedData.favourite}
             />
         );
     });

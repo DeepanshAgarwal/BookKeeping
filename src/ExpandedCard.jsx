@@ -20,11 +20,14 @@ export default function ExpandedCard({
     url,
     summary,
     isbn,
-    key,
     onClose,
+    favourite,
+    toggleFavourite,
 }) {
     const [open, setOpen] = React.useState(true);
-    const [isFavourite, setIsFavourite] = React.useState(false);
+    // const [isFavourite, setIsFavourite] = React.useState(
+    //     getCurrentBook().favourite
+    // );
 
     // const handleClickOpen = () => {
     //     setOpen(true);
@@ -35,8 +38,8 @@ export default function ExpandedCard({
         onClose();
     };
 
-    function updateFavourites() {
-        let currentBook = {
+    function getCurrentBook() {
+        return {
             title: title,
             author: author,
             pageCount: pages,
@@ -44,15 +47,20 @@ export default function ExpandedCard({
             categories: categories,
             summary: summary,
             isbn: isbn,
+            favourite: favourite,
         };
-        if (isFavourite == true) {
+    }
+
+    function updateFavourites() {
+        let currentBook = getCurrentBook();
+        if (currentBook.favourite == true) {
+            currentBook.favourite = false;
             removeFromFavourites(currentBook);
-            setIsFavourite(false);
-            return;
         } else {
+            currentBook.favourite = true;
             addToFavourites(currentBook);
-            setIsFavourite(true);
         }
+        toggleFavourite();
     }
 
     return (
@@ -110,7 +118,7 @@ export default function ExpandedCard({
                             </p>
                         </div>
                         <div className="allInfo-buttons">
-                            {isFavourite == false ? (
+                            {favourite == false ? (
                                 <div className="favourites button">
                                     <button onClick={updateFavourites}>
                                         Add to Favourites

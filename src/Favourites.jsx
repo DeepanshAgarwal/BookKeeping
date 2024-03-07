@@ -37,6 +37,7 @@ export default function Favourites({ onClose }) {
                 summary={book.summary}
                 url={book.coverPageUrl}
                 isbn={book.isbn}
+                favourite={book.favourite}
             />
         );
     });
@@ -53,7 +54,7 @@ export default function Favourites({ onClose }) {
                     <h1>Favourites</h1>
                     <div className="favouriteBooks">
                         {favouriteBooks.length === 0 ? (
-                            <p>No favourite books</p>
+                            <h2>No favourite books</h2>
                         ) : (
                             cards
                         )}

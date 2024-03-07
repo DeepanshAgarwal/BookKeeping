@@ -1,6 +1,6 @@
 .Favourites {
     /* padding: 2vh 2vw; */
-    min-height: calc(100vh - 4vh);
+    min-height: 100vh;
     /* height: auto; */
     background-color: #2e3440;
     color: #eceff4;

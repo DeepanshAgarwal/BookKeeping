@@ -61,6 +61,7 @@ function getRefinedData(data) {
         categories: data.categories,
         summary: data.summary,
         isbn: data.canonical_isbn,
+        favourite: false,
     };
 }
 

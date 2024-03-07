@@ -11,8 +11,10 @@ export default function Card({
     summary,
     id,
     isbn,
+    favourite,
 }) {
     const [isExpanded, setIsExpanded] = useState(false);
+    const [isFavourite, setIsFavourite] = useState(favourite);
 
     function handleCardClick() {
         setIsExpanded(true);
@@ -20,6 +22,10 @@ export default function Card({
 
     function handleExpandedCardClose() {
         setIsExpanded(false);
+    }
+
+    function toggleFavourite() {
+        setIsFavourite(!isFavourite);
     }
 
     return (
@@ -46,6 +52,8 @@ export default function Card({
                     summary={summary}
                     key={id}
                     isbn={isbn}
+                    favourite={isFavourite}
+                    toggleFavourite={toggleFavourite}
                     onClose={handleExpandedCardClose}
                 />
             )}
