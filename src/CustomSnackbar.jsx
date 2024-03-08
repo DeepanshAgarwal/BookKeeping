@@ -26,7 +26,7 @@ export default function CustomSnackbar() {
         <div>
             <Snackbar
                 open={open}
-                autoHideDuration={15000}
+                autoHideDuration={14000}
                 onClose={handleClose}
             >
                 <SnackbarContent
