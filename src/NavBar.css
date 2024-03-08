@@ -3,7 +3,7 @@
 }
 
 nav {
-    z-index: 10;
+    z-index: 10000;
     height: 60px;
     width: calc(95vw - 12px);
     display: flex;
