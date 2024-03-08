@@ -50,6 +50,16 @@ export default function Favourites({ onClose }) {
                 onClose={handleClose}
                 TransitionComponent={Transition}
             >
+                <div className="close-button">
+                    <IconButton
+                        edge="start"
+                        color="inherit"
+                        onClick={handleClose}
+                        aria-label="close"
+                    >
+                        <CloseIcon />
+                    </IconButton>
+                </div>
                 <div className="Favourites">
                     <h1>Favourites</h1>
                     <div className="favouriteBooks">
