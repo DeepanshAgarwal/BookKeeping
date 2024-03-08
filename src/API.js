@@ -70,8 +70,8 @@ async function getAllData(categories) {
     console.log("FETCHING DATA\nSTATUS: INITIATED");
     let allData = [];
 
-    // for (let i = 0; i < categories.length; i++) {
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < categories.length; i++) {
+        // for (let i = 0; i < 2; i++) {
         // Wait for 1.25 second between each request
         await new Promise((resolve) => setTimeout(resolve, 1250));
 

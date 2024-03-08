@@ -8,23 +8,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
 export default function CardsDisplay({ index, categoryData }) {
-    // const [allBooks, setAllBooks] = useState([]);
-
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         try {
-    //             const books = await fetchBookByCategory(category);
-    //             setAllBooks(books);
-    //             // console.log(allBooks);
-    //         } catch (error) {
-    //             console.error("Failed to fetch books:", error);
-    //         }
-    //     }
-    //     fetchData();
-    // }, [category]);
-
-    // console.log("REREENDERING CARDS DISPLAY FOR CATEGORY: ", category);
-
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -91,21 +74,6 @@ export default function CardsDisplay({ index, categoryData }) {
             >
                 {cards}
             </Carousel>
-
-            {/* {categoryData.map((book, key) => {
-                    let refinedData = getRefinedData(book);
-                    return (
-                        <Card
-                            key={key}
-                            title={refinedData.title}
-                            author={refinedData.author}
-                            pages={refinedData.pageCount}
-                            categories={refinedData.categories}
-                            summary={refinedData.summary}
-                            url={refinedData.coverPageUrl}
-                        />
-                    );
-                })} */}
         </div>
     );
 }

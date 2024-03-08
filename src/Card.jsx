@@ -57,34 +57,6 @@ export default function Card({
                     onClose={handleExpandedCardClose}
                 />
             )}
-
-            {/* {
-                <div className="hidden">
-                    <div className="hidden-title">
-                        <p>{title}</p>
-                    </div>
-                    <div className="hidden-author">
-                        <p>
-                            <b>Author:</b> {author}
-                        </p>
-                    </div>
-                    <div className="hidden-summary">
-                        <p>
-                            <b>Summary:</b> {summary}
-                        </p>
-                    </div>
-                    <div className="hidden-categories">
-                        <p>
-                            <b>Categories:</b> {categories}
-                        </p>
-                    </div>
-                    <div className="hidden-pages">
-                        <p>
-                            <b>Page: </b> Count: {pages}
-                        </p>
-                    </div>
-                </div>
-            } */}
         </div>
     );
 }
