@@ -22,16 +22,31 @@ export default function App() {
             <Router>
                 <SidebarNavigation handleSearch={handleSearch}>
                     <Routes>
-                        <Route path="/" element={<Dashboard />} />
-                        <Route path="/catalog" element={<Catalog />} />
-                        <Route path="/favourites" element={<Favourites />} />
-                        <Route path="/recents" element={<Recents />} />
-                        <Route path="/developers" element={<Developers />} />
+                        <Route path="/BookKeeping/" element={<Dashboard />} />
                         <Route
-                            path="/search"
+                            path="/BookKeeping/catalog"
+                            element={<Catalog />}
+                        />
+                        <Route
+                            path="/BookKeeping/favourites"
+                            element={<Favourites />}
+                        />
+                        <Route
+                            path="/BookKeeping/recents"
+                            element={<Recents />}
+                        />
+                        <Route
+                            path="/BookKeeping/developers"
+                            element={<Developers />}
+                        />
+                        <Route
+                            path="/BookKeeping/search"
                             element={<Search searchQuery={searchQuery} />}
                         />
-                        <Route path="/*" element={<h1>Page not found</h1>} />
+                        <Route
+                            path="/BookKeeping/*"
+                            element={<h1>Page not found</h1>}
+                        />
                     </Routes>
                 </SidebarNavigation>
             </Router>

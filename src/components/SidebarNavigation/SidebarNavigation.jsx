@@ -10,26 +10,26 @@ import { NavLink, useNavigate } from "react-router-dom";
 
 const routes = [
     {
-        path: "/",
+        path: "/BookKeeping/",
         name: "Dashboard",
         icon: <MdSpaceDashboard />,
     },
     {
-        path: "/catalog",
+        path: "/BookKeeping/catalog",
         name: "Catalog",
         icon: <IoBookSharp />,
     },
     {
-        path: "/favourites",
+        path: "/BookKeeping/favourites",
         name: "Favorites",
         icon: <MdFavorite />,
     },
     {
-        path: "/recents",
+        path: "/BookKeeping/recents",
         name: "Recents",
         icon: <PiBooksBold />,
     },
-    { path: "/developers", name: "Developers", icon: <FaCode /> },
+    { path: "/BookKeeping/developers", name: "Developers", icon: <FaCode /> },
 ];
 
 export default function SidebarNavigation({ children, handleSearch }) {
@@ -110,7 +110,7 @@ export default function SidebarNavigation({ children, handleSearch }) {
                                 onKeyDown={(event) => {
                                     if (event.key === "Enter") {
                                         handleSearch(event.target.value);
-                                        navigate("/search");
+                                        navigate("/BookKeeping/search");
                                     }
                                 }}
                             />
