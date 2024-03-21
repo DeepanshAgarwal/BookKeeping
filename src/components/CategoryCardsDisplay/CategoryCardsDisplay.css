@@ -1,0 +1,19 @@
+.CategoryCardsDisplay {
+    flex: 1;
+    /* padding-left: 2.5vw;
+    padding-right: 2.5vw; */
+    /* z-index: 11; */
+}
+
+.react-multi-carousel-list {
+    padding-left: 10px;
+}
+
+.react-multi-carousel-item {
+    padding-bottom: 20px;
+}
+
+/* .react-multi-carousel-dot-list {
+    position: relative;
+    top: 200px;
+} */

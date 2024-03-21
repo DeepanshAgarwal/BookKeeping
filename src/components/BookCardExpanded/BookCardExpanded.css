@@ -1,0 +1,48 @@
+.bce {
+    width: 1000px;
+    height: 500px;
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    gap: 20px;
+    border: 5px solid #388087;
+}
+
+.bce-image {
+    /* width: 100%; */
+    height: 100%;
+}
+
+.bce-image img {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+}
+
+.bce h6 {
+    font-size: 1.1em;
+    font-family: "Truculenta", sans-serif;
+}
+
+.bce-title h4 {
+    font-weight: bold;
+    font-family: "Truculenta", sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.bce-summary h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* number of lines to show */
+    line-clamp: 7;
+    -webkit-box-orient: vertical;
+}

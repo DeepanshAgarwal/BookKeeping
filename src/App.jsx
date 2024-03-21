@@ -1,46 +1,40 @@
-import { useState, useEffect } from "react";
-import "./App.css";
-import { categories, getAllData } from "./API";
-import NavBar from "./NavBar";
-import CardsDisplay from "./CardsDisplay";
-import CustomPlaceholder from "./CustomPlaceholder";
-import CustomSnackbar from "./CustomSnackbar";
+import React, { useState, useEffect } from "react";
+import "./styles/App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Search from "./pages/Search/Search";
+import Dashboard from "./pages/Dashboard/Dashboard";
+import Catalog from "./pages/Catalog/Catalog";
+import Favourites from "./pages/Favourites/Favourites";
+import Recents from "./pages/Recents/Recents";
+import Developers from "./pages/Developers/Developers";
+import SidebarNavigation from "./components/SidebarNavigation/SidebarNavigation";
 
-// import FullScreenDialog from "./Test";
+export default function App() {
+    const [searchQuery, setSearchQuery] = useState("");
 
-function App() {
-    const [allData, setAllData] = useState([]);
-    useEffect(() => {
-        async function fetchData() {
-            try {
-                const allData = await getAllData(categories);
-                setAllData(allData);
-            } catch (error) {
-                console.error("Failed to fetch books:", error);
-            }
-        }
-        fetchData();
-    }, []);
+    function handleSearch(searchQuery) {
+        console.log(searchQuery);
+        setSearchQuery(searchQuery);
+    }
+
     return (
-        <div>
-            <CustomSnackbar />
-            <NavBar />
-            <div className="main-content">
-                {allData.length === 0 && <CustomPlaceholder />}
-                {allData.map((data, index) => {
-                    return (
-                        <CardsDisplay
-                            key={index}
-                            index={index}
-                            categoryData={data}
+        <>
+            <Router>
+                <SidebarNavigation handleSearch={handleSearch}>
+                    <Routes>
+                        <Route path="/" element={<Dashboard />} />
+                        <Route path="/catalog" element={<Catalog />} />
+                        <Route path="/favourites" element={<Favourites />} />
+                        <Route path="/recents" element={<Recents />} />
+                        <Route path="/developers" element={<Developers />} />
+                        <Route
+                            path="/search"
+                            element={<Search searchQuery={searchQuery} />}
                         />
-                    );
-                })}
-            </div>
-        </div>
+                        <Route path="/*" element={<h1>Page not found</h1>} />
+                    </Routes>
+                </SidebarNavigation>
+            </Router>
+        </>
     );
-
-    // return <FullScreenDialog />;
 }
-
-export default App;

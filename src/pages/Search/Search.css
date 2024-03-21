@@ -1,0 +1,17 @@
+.Search {
+    font-family: "Truculenta", sans-serif;
+}
+
+.search-heading {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #388087;
+}
+
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    margin-top: 2rem;
+    gap: 1.2rem;
+}

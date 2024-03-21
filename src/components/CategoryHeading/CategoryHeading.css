@@ -1,0 +1,26 @@
+.CategoryHeading h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* margin-bottom: 1rem; */
+    text-align: center;
+    color: #388087;
+}
+
+hr.fancy-line {
+    height: 30px;
+    border-style: solid;
+    border-color: #388087;
+    border-width: 2px 0 0 0;
+    border-radius: 20px;
+    margin: 0px 25px;
+}
+hr.fancy-line:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}

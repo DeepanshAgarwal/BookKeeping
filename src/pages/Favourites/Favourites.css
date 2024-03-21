@@ -1,0 +1,17 @@
+.Favourites {
+    font-family: "Truculenta", sans-serif;
+}
+
+.favourites-heading {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #388087;
+}
+
+.favourite-bookCards {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    margin-top: 2rem;
+    gap: 1.2rem;
+}

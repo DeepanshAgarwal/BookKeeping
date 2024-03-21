@@ -1,0 +1,27 @@
+.CustomButton {
+    background-color: #6fb3b8;
+    /* color: #f6f6f2; */
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.CustomButton:hover {
+    scale: 1.1;
+    background-color: #388087;
+    color: #f6f6f2;
+    /* border-color: #646cff; */
+}
+
+.CustomButton:active {
+    transform: translateY(4px);
+}
+/* 
+.CustomButton:focus {
+    background-color: #388087;
+} */

@@ -4,15 +4,13 @@ import Snackbar from "@mui/material/Snackbar";
 import SnackbarContent from "@mui/material/SnackbarContent";
 
 export default function CustomSnackbar({ message, duration }) {
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
 
-    // React.useEffect(() => {
-    //     setOpen(true);
-    // }, []);
-
-    // const handleClick = () => {
-    //     setOpen(true);
-    // };
+    React.useEffect(() => {
+        if (message && duration) {
+            setOpen(true);
+        }
+    }, [message, duration]);
 
     const handleClose = (event, reason) => {
         if (reason === "clickaway") {
@@ -28,14 +26,14 @@ export default function CustomSnackbar({ message, duration }) {
                 open={open}
                 autoHideDuration={duration || 5000}
                 onClose={handleClose}
+                anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
             >
                 <SnackbarContent
                     message={message}
                     sx={{
-                        backgroundColor: "#D8DEE9", // Change the background color
-                        color: "#2E3440", // Change the text color
-                        // borderRadius: "10px", // Add border radius
-                        // Add other styles as needed
+                        backgroundColor: "#D8DEE9",
+                        color: "#2E3440",
+                        // borderRadius: "10px",
                     }}
                 />
             </Snackbar>

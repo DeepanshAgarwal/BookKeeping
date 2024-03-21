@@ -1,0 +1,113 @@
+.SidebarNavigation {
+    display: flex;
+    font-family: "Poppins", sans-serif;
+    background-color: #f6f6f2;
+}
+
+.sidebar {
+    background-color: #388087;
+    color: #f6f6f2;
+    height: 100vh;
+}
+
+.sidebar-top {
+    height: 4.2rem;
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.sidebar-top-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sidebar-top-icon {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-top-icon:hover {
+    cursor: pointer;
+}
+
+.sidebar-search {
+    height: 70px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.sidebar-search-icon {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-search-icon:hover {
+    cursor: pointer;
+}
+
+.sidebar-search-search {
+    /* width: 10rem; */
+    height: 30px;
+    /* padding: 10px; */
+    border-radius: 0.5rem;
+    background-color: #f6f6f2;
+    /* color: #6fb3b8; */
+    border: 2px solid transparent;
+}
+
+.sidebar-search-search:focus {
+    outline: none;
+    border: 2px solid #c2edce;
+}
+
+.sidebar-link {
+    height: 71.2px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    font-size: 1.3rem;
+    color: #f6f6f2;
+    border-right: 5px solid transparent;
+    transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 1.45);
+}
+
+.sidebar-link:hover {
+    background-color: #6fb3b8;
+    color: #f6f6f2;
+    text-decoration: none;
+    border-right: 5px solid #badfe7;
+    transition: 0.2s cubic-bezier(0.6, -0.28, 0.735, 1.45);
+}
+
+.sidebar-link-text {
+    white-space: nowrap;
+}
+
+.sidebar-link-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: #f6f6f2;
+    /* max-width: 1470px; */
+    /* max-width: 96%; */
+    padding: 20px;
+    /* flex: 1; */
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}

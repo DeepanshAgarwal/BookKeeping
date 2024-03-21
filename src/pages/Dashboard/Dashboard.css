@@ -1,0 +1,10 @@
+.Dashboard {
+    font-family: "Truculenta", sans-serif;
+}
+
+.dashboard-heading {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #388087;
+    margin-bottom: 30px;
+}
