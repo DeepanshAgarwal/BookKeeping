@@ -9,6 +9,13 @@
     margin-bottom: 30px;
 }
 
+.developers-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 .dev {
     width: 300px;
     display: flex;

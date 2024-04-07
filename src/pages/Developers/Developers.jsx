@@ -35,6 +35,34 @@ export default function Developers() {
                         </div>
                     </div>
                 </div>
+                <div className="dev-2 dev">
+                    <div className="dev-image">
+                        <img
+                            src="https://avatars.githubusercontent.com/u/144715182?v=4"
+                            alt="Priya Verma"
+                        />
+                    </div>
+                    <div className="dev-content">
+                        <h2>Priya Verma</h2>
+                        <p>
+                            Priya is a frontend developer with a passion for web
+                            development. She is a student at DTU, New Delhi
+                            persuing a degree in manufacturing engineering.
+                        </p>
+                        <div className="dev-links">
+                            <p>
+                                <a href="https://www.linkedin.com/in/priya-verma-9668b4291/">
+                                    LinkedIn
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://github.com/priyaverma0604">
+                                    GitHub
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
