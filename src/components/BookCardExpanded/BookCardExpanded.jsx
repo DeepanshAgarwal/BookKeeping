@@ -87,6 +87,12 @@ export default function BookCardExpanded({
         favReRender();
     }
 
+    function speak(text) {
+        window.speechSynthesis.cancel(); // Stop any ongoing speech
+        const utterance = new SpeechSynthesisUtterance(text);
+        window.speechSynthesis.speak(utterance);
+    }
+
     let currentFavourites = localStorage.getItem("favourites");
     if (currentFavourites) {
         currentFavourites = JSON.parse(currentFavourites);
@@ -97,7 +103,10 @@ export default function BookCardExpanded({
     let isFavourite = currentFavourites.some((book) => book.isbn === isbn);
 
     return (
-        <div className="BookCardExpended">
+        <div
+            className="BookCardExpended"
+            onMouseEnter={() => speak(`${title} by ${author}`)}
+        >
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
