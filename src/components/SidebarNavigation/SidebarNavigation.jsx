@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import "./SidebarNavigation.css";
 
@@ -34,9 +34,7 @@ const routes = [
 
 export default function SidebarNavigation({ children, handleSearch }) {
     const [isOpen, setIsOpen] = useState(true);
-    const [inputValue, setInputValue] = useState("");
     const navigate = useNavigate();
-    const recognition = useRef(null);
 
     function toggleSidebar() {
         setIsOpen(!isOpen);
@@ -69,26 +67,6 @@ export default function SidebarNavigation({ children, handleSearch }) {
         },
     };
 
-    useEffect(() => {
-        window.SpeechRecognition =
-            window.SpeechRecognition || window.webkitSpeechRecognition;
-        recognition.current = new window.SpeechRecognition();
-        recognition.current.interimResults = false; // Set to false
-
-        recognition.current.onresult = (event) => {
-            const transcript = Array.from(event.results)
-                .map((result) => result[0])
-                .map((result) => result.transcript)
-                .join("");
-
-            if (event.results[0].isFinal) {
-                setInputValue(transcript); // Update input value when speech is final
-                handleSearch(transcript);
-                navigate("/BookKeeping/search");
-            }
-        };
-    }, []);
-
     return (
         <div className="SidebarNavigation">
             <motion.div
@@ -119,9 +97,6 @@ export default function SidebarNavigation({ children, handleSearch }) {
                 <div className="sidebar-search">
                     <div className="sidebar-search-icon">
                         <FaSearch onClick={toggleSidebar} />
-                        {/* <button onClick={() => recognition.current.start()}>
-                            Speak
-                        </button> */}
                     </div>
                     <AnimatePresence>
                         {isOpen && (
@@ -132,10 +107,6 @@ export default function SidebarNavigation({ children, handleSearch }) {
                                 variants={inputAnimation}
                                 className="sidebar-search-search"
                                 placeholder="Search..."
-                                value={inputValue}
-                                onChange={(event) =>
-                                    setInputValue(event.target.value)
-                                } // Update state when input changes
                                 onKeyDown={(event) => {
                                     if (event.key === "Enter") {
                                         handleSearch(event.target.value);

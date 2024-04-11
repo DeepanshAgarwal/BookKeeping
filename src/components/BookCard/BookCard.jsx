@@ -54,18 +54,8 @@ export default function BookCard({
         setIsExpanded(false);
     }
 
-    function speak(text) {
-        window.speechSynthesis.cancel(); // Stop any ongoing speech
-        const utterance = new SpeechSynthesisUtterance(text);
-        window.speechSynthesis.speak(utterance);
-    }
-
     return (
-        <div
-            className="BookCard"
-            id={isbn}
-            onMouseEnter={() => speak(`${title} by ${author}`)}
-        >
+        <div className="BookCard" id={isbn}>
             <div className="bookcard-content" onClick={handleCardClick}>
                 <div className="bookcard-image">
                     <img src={url} alt={title} />
